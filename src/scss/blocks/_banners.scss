@@ -1,0 +1,51 @@
+/********************************************************* Banners */
+.big-banner {
+  background-image: url("data:image/svg+xml,%3Csvg width='1280' height='401' viewBox='0 0 1280 401' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1566_566)'%3E%3Crect width='1280' height='401' rx='20' fill='%23F5FBFD'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M753.816 73.1104C787.263 79.7556 790.588 126.264 814.592 150.475C838.356 174.445 886.943 177.691 890.742 211.221C894.542 244.76 855.537 265.265 830.115 287.483C807.213 307.499 784.176 332.841 753.816 330.894C724.325 329.003 706.923 299.84 686.716 278.288C667.559 257.855 645.79 238.911 641.612 211.221C636.787 179.238 642.485 145.443 662.884 120.334C685.268 92.7819 718.988 66.1909 753.816 73.1104Z' fill='%23CBF3F0' fill-opacity='0.3'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M138.058 -70.2183C149.222 -37.9963 110.766 -11.6292 102 21.3179C93.3213 53.9362 115.068 97.5056 88.0512 117.725C61.0279 137.949 23.626 114.648 -8.39197 103.936C-37.2367 94.2848 -70.7453 87.2084 -84.4045 60.0242C-97.6723 33.6191 -81.2969 3.86687 -72.9072 -24.4602C-64.9533 -51.316 -59.6032 -79.6734 -37.8187 -97.2685C-12.6562 -117.592 19.3871 -129.749 51.3621 -124.831C86.4484 -119.435 126.433 -103.77 138.058 -70.2183Z' fill='%23CBF3F0' fill-opacity='0.3'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1566_566'%3E%3Crect width='1280' height='401' rx='20' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+
+  &__text {
+    width: 55%;
+    padding: 42px 24px 42px 120px;
+
+    @media (max-width: 1024px) {
+      padding-left: 42px;
+    }
+
+    @media (max-width: 992px) {
+      width: 100%;
+      padding: 42px 16px;
+    }
+  }
+
+  &__media {
+    width: 45%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__text-title {
+    font-size: 56px;
+    font-weight: 600;
+    color: $color-main;
+    margin-bottom: 40px;
+
+    @media (max-width: 767px) {
+      font-size: 24px;
+    }
+  }
+
+  &+.big-banner {
+    margin-top: 40px;
+  }
+}

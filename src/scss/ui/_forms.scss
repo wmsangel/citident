@@ -1,0 +1,241 @@
+/********************************************************* Form */
+.field-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px -8px;
+
+  &[data-cols="1"] {
+    .field-row__col {
+      width: calc(100% / 1 - 16px);
+
+      @media (max-width: 767px) {
+        width: calc(100% / 1 - 4px);
+      }
+    }
+  }
+
+  &[data-cols="2"] {
+    .field-row__col {
+      width: calc(100% / 2 - 16px);
+
+      @media (max-width: 767px) {
+        width: calc(100% / 1 - 4px);
+      }
+    }
+  }
+
+  &__col {
+    margin: 8px;
+
+    .iti {
+      width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      margin: 4px;
+
+      &--checkbox {
+        margin: 18px 4px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    margin: 0 -4px;
+  }
+}
+
+.field-action {
+  .btn {
+    width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 18px;
+  }
+}
+
+input {
+  &[type="email"],
+  &[type="phone"],
+  &[type="text"] {
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    outline: none;
+    
+    &::-webkit-input-placeholder {
+      color: #A5ABAD;
+    }
+    &::-moz-placeholder {
+      color: #A5ABAD;
+    }
+    &:-ms-input-placeholder {
+      color: #A5ABAD;
+    }
+    &:-moz-placeholder {
+      color: #A5ABAD;
+    }
+  }
+  &[type="time"] {
+    padding: 14px 16px 14px 48px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    outline: none;
+    position: relative;
+
+    &::-webkit-input-placeholder {
+      color: #A5ABAD;
+    }
+    &::-moz-placeholder {
+      color: #A5ABAD;
+    }
+    &:-ms-input-placeholder {
+      color: #A5ABAD;
+    }
+    &:-moz-placeholder {
+      color: #A5ABAD;
+    }
+
+    &::-webkit-calendar-picker-indicator {
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12Z' stroke='%231FBBB3' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.71 15.18L12.61 13.33C12.07 13.01 11.63 12.24 11.63 11.61V7.51001' stroke='%231FBBB3' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-position: 4px 50%;
+      background-size: 24px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      color: transparent;
+      cursor: pointer;
+      height: auto;
+      position: absolute;
+      width: auto;
+    }
+  }
+  &[type="date"] {
+    padding: 14px 16px 14px 48px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    outline: none;
+    position: relative;
+
+    &::-webkit-input-placeholder {
+      color: #A5ABAD;
+    }
+    &::-moz-placeholder {
+      color: #A5ABAD;
+    }
+    &:-ms-input-placeholder {
+      color: #A5ABAD;
+    }
+    &:-moz-placeholder {
+      color: #A5ABAD;
+    }
+
+    &::-webkit-calendar-picker-indicator {
+      background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.5 2V5' stroke='%231FBBB3' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.5 2V5' stroke='%231FBBB3' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4 9.09009H21' stroke='%231FBBB3' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21.5 8.5V17C21.5 20 20 22 16.5 22H8.5C5 22 3.5 20 3.5 17V8.5C3.5 5.5 5 3.5 8.5 3.5H16.5C20 3.5 21.5 5.5 21.5 8.5Z' stroke='%231FBBB3' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.1947 13.7H16.2037' stroke='%231FBBB3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.1947 16.7H16.2037' stroke='%231FBBB3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.4955 13.7H12.5045' stroke='%231FBBB3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.4955 16.7H12.5045' stroke='%231FBBB3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.79431 13.7H8.80329' stroke='%231FBBB3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.79431 16.7H8.80329' stroke='%231FBBB3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-position: 4px 50%;
+      background-size: 24px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      color: transparent;
+      cursor: pointer;
+      height: auto;
+      position: absolute;
+      width: auto;
+    }
+  }
+}
+
+.input-checkbox {
+  position: relative;
+  padding-left: 36px;
+  min-height: 24px;
+  display: block;
+  cursor: pointer;
+  z-index: 2;
+
+  input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    background: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    margin: 0;
+
+    &:checked {
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0.707107' y1='4.62102' x2='6.36396' y2='10.2779' stroke='%23201E1F' stroke-width='2'/%3E%3Cline x1='4.94975' y1='10.2782' x2='13.435' y2='1.79296' stroke='%23201E1F' stroke-width='2'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--popup {
+    font-size: 12px;
+
+    input {
+      border: 1px solid #A5ABAD;
+    }
+  }
+}
+
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 15px 48px 15px 16px;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='25' height='15' viewBox='0 0 25 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1750_6621)'%3E%3Cpath d='M3.02091 4.63412L11.7709 13.1812C11.8751 13.2827 11.9879 13.3544 12.1095 13.3963C12.231 13.4389 12.3612 13.4602 12.5001 13.4602C12.639 13.4602 12.7692 13.4389 12.8907 13.3963C13.0122 13.3544 13.1251 13.2827 13.2292 13.1812L22.0053 4.63412C22.2483 4.3974 22.3699 4.10151 22.3699 3.74644C22.3699 3.39137 22.2397 3.08702 21.9792 2.8334C21.7188 2.57977 21.415 2.45296 21.0678 2.45296C20.7206 2.45296 20.4167 2.57977 20.1563 2.8334L12.5001 10.2899L4.84383 2.8334C4.60077 2.59668 4.30147 2.47832 3.94591 2.47832C3.58966 2.47832 3.28133 2.60513 3.02091 2.85876C2.7605 3.11238 2.63029 3.40827 2.63029 3.74644C2.63029 4.0846 2.7605 4.3805 3.02091 4.63412Z' fill='%231BA49D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1750_6621'%3E%3Crect width='14' height='25' fill='white' transform='matrix(-4.37114e-08 -1 -1 4.37114e-08 25 14.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 16px) 50%;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+}
+
+.textarea {
+  padding: 15px 16px;
+  width: 100%;
+  min-height: 100px;
+  resize: vertical;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+
+}
+
+form.form-blue {
+  .textarea,
+  .select,
+  input[type="time"],
+  input[type="date"],
+  input[type="phone"],
+  input[type="email"],
+  input[type="text"] {
+    background-color: #F5FBFD;
+  }
+}

@@ -1,0 +1,125 @@
+.price-select {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  position: relative;
+
+  &__item {
+    border: 1px solid #CBF3F0;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: $color-main;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-right: 14px;
+    margin-bottom: 14px;
+    transition: all .3s ease;
+
+    &.is-selected {
+      background: $color-main;
+      color: #fff;
+
+      path {
+        fill: #fff;
+      }
+    }
+
+    &:hover:not(.is-selected) {
+      background: #CBF3F0;
+    }
+
+    @media (max-width: 992px) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 0;
+      border: none;
+      order: 2;
+      &.is-selected {
+        background-image: url("data:image/svg+xml,%3Csvg width='19' height='11' viewBox='0 0 19 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1618_8138)'%3E%3Cpath d='M2.29577 3.24832L8.94577 9.9639C9.02494 10.0436 9.1107 10.0999 9.20306 10.1329C9.29542 10.1664 9.39438 10.1831 9.49993 10.1831C9.60549 10.1831 9.70445 10.1664 9.79681 10.1329C9.88917 10.0999 9.97494 10.0436 10.0541 9.9639L16.7239 3.24832C16.9086 3.06233 17.001 2.82984 17.001 2.55086C17.001 2.27187 16.902 2.03274 16.7041 1.83347C16.5062 1.63419 16.2753 1.53456 16.0114 1.53456C15.7475 1.53456 15.5166 1.63419 15.3187 1.83347L9.49993 7.69216L3.68118 1.83347C3.49646 1.64748 3.26899 1.55448 2.99877 1.55448C2.72802 1.55448 2.49368 1.65412 2.29577 1.8534C2.09785 2.05267 1.99889 2.28516 1.99889 2.55086C1.99889 2.81656 2.09785 3.04905 2.29577 3.24832Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1618_8138'%3E%3Crect width='11' height='19' fill='white' transform='matrix(-4.37114e-08 -1 -1 4.37114e-08 19 11)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+        background-position: calc(100% - 16px) 50%;
+        background-repeat: no-repeat;
+        padding-right: 48px;
+        order: 1;
+      }
+      &:not(.is-selected) {
+        display: none;
+      }
+    }
+  }
+
+  &__item-icon {
+    margin-right: 16px;
+
+    @media (max-width: 992px) {
+      width: 46px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    margin-bottom: 24px;
+
+    &.is-opened {
+      background: #F5FBFD;
+
+      .price-select__item {
+        display: flex;
+        &.is-selected {
+          background-image: url("data:image/svg+xml,%3Csvg width='20' height='11' viewBox='0 0 20 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2528_7328)'%3E%3Cpath d='M17.2042 7.75168L10.5542 1.0361C10.4751 0.956387 10.3893 0.900059 10.2969 0.867112C10.2046 0.833634 10.1056 0.816895 10.0001 0.816895C9.89451 0.816895 9.79555 0.833634 9.70319 0.867112C9.61083 0.900059 9.52506 0.956387 9.4459 1.0361L2.77611 7.75168C2.59138 7.93767 2.49902 8.17016 2.49902 8.44914C2.49902 8.72813 2.59798 8.96726 2.7959 9.16653C2.99381 9.36581 3.22472 9.46544 3.48861 9.46544C3.7525 9.46544 3.9834 9.36581 4.18131 9.16653L10.0001 3.30784L15.8188 9.16653C16.0035 9.35252 16.231 9.44552 16.5012 9.44552C16.772 9.44552 17.0063 9.34588 17.2042 9.14661C17.4021 8.94733 17.5011 8.71484 17.5011 8.44914C17.5011 8.18344 17.4021 7.95095 17.2042 7.75168Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2528_7328'%3E%3Crect width='11' height='19' fill='white' transform='matrix(-4.37114e-08 1 1 4.37114e-08 0.5 0)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+  }
+}
+
+.price-content {
+  display: none;
+  &.is-selected {
+    display: block;
+  }
+
+  &__text {
+    width: calc(100% - 120px);
+    padding-right: 40px;
+    font-size: 16px;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  &__price {
+    width: 120px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: right;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      text-align: left;
+      padding-top: 24px;
+    }
+  }
+}
+
+.price-content-row {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+
+  &:nth-child(even) {
+    background: #F5FBFD;
+  }
+
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+}

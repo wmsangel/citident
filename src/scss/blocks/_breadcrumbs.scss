@@ -1,0 +1,36 @@
+/********************************************************* Breadcrumbs */
+#breadcrumbs {
+  margin-top: 48px;
+  margin-bottom: 32px;
+}
+
+.breadcrumbs {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    font-size: 14px;
+
+    &:not(:first-child) {
+      &:before {
+        content: '/';
+        color: #A5ABAD;
+        padding: 0 6px;
+      }
+    }
+
+    &--active {
+      color: $color_main;
+    }
+  }
+
+  &__link {
+    color: #A5ABAD;
+    text-decoration: none;
+  }
+}

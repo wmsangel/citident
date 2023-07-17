@@ -1,0 +1,30 @@
+{
+  "name": "citident",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "browser-sync start --proxy \"citident\" --files 'css/*.css, *.html' & npm run dev:css",
+    "dev:css": "node-sass -wr src/scss/ -o css/",
+    "build:css": "node-sass src/scss/ -o css/ --output-style compressed",
+    "minify:css": "npm run build:css & npx postcss css/*.css --use autoprefixer -d css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmsangel/citident.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wmsangel/citident/issues"
+  },
+  "homepage": "https://github.com/wmsangel/citident#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.29.3",
+    "node-sass": "^9.0.0",
+    "postcss-cli": "^10.1.0",
+    "scss": "^0.2.4",
+    "swiper": "^10.0.4"
+  }
+}
