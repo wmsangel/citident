@@ -1,0 +1,43 @@
+/********************************************************* complaints */
+.complaints {
+  display: flex;
+  align-items: center;
+  margin: 64px 0;
+
+  &__media {
+    width: 400px;
+    padding-right: 75px;
+
+    @media (max-width: 992px) {
+      padding-right: 0;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 2;
+      top: 100px;
+    }
+  }
+
+  &__info {
+    width: calc(100% - 400px);
+    background: #F5FBFD;
+    padding: 40px;
+    border-radius: 20px;
+    line-height: 2;
+
+    @media (max-width: 992px) {
+      width: 100%;
+      padding: 24px;
+      border-radius: 10px;
+      line-height: 1.7;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  @media (max-width: 992px) {
+    flex-wrap: wrap;
+    margin: 24px 0
+  }
+}
