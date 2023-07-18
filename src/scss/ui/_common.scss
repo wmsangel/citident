@@ -12,6 +12,17 @@
 section {
   margin: 160px 0;
 
+  &.section--blue-bg {
+    background: #F5FBFD;
+    padding: 80px 0;
+    margin-top: 80px;
+
+    @media (max-width: 767px) {
+      padding: 40px 0;
+      margin-top: 40px;
+    }
+  }
+
   @media (max-width: 767px) {
     margin: 48px 0;
   }

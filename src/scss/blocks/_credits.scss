@@ -1,0 +1,323 @@
+.credit {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__left {
+    width: 510px;
+    padding-right: 20px;
+    p {
+      font-size: 32px;
+      font-weight: 400;
+
+      @media (max-width: 992px) {
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
+    }
+    span {
+      color: $color-main;
+    }
+
+    @media (max-width: 992px) {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  &__right {
+    width: calc(100% - 510px);
+    padding-left: 20px;
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 992px) {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+  &__bank {
+    margin-bottom: 40px;
+  }
+}
+
+.credit-features {
+  display: inline-flex;
+  height: 170px;
+  padding: 32px;
+  border-radius: 20px;
+  width: calc(100% / 2 - 16px);
+  margin: 0 8px 8px 8px;
+
+  &--1 {
+    background: url('../img/media/credits/credit-1.svg') #CBF3F0 no-repeat bottom right;
+
+    @media (max-width: 992px) {
+      background-size: 100px;
+    }
+  }
+
+  &--2 {
+    background: url('../img/media/credits/credit-2.svg') #F5FBFD no-repeat bottom right;
+
+    @media (max-width: 992px) {
+      background-size: 100px;
+    }
+  }
+
+  &--3 {
+    background: url('../img/media/credits/credit-3.svg') #F5FBFD no-repeat bottom right;
+
+    @media (max-width: 992px) {
+      background-size: 100px;
+    }
+  }
+
+  &--4 {
+    background: url('../img/media/credits/credit-4.svg') #CBF3F0 no-repeat bottom right;
+
+    @media (max-width: 992px) {
+      background-size: 100px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    color: #1FBBB3;
+    padding-right: 70px;
+  }
+
+  @media (max-width: 992px) {
+    width: 100%;
+    margin: 8px 0;
+    height: auto;
+  }
+}
+
+.credit-how {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 64px;
+
+  @media (max-width: 992px) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 32px	;
+  }
+}
+
+.credit-how-item {
+  width: calc(100% / 2 - 40px);
+  margin: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='620' height='302' viewBox='0 0 620 302' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1971_10296)'%3E%3Crect width='620' height='302' rx='20' fill='white'/%3E%3Ccircle cx='79' cy='302' r='39' fill='%23CBF3F0'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1971_10296'%3E%3Crect width='620' height='302' rx='20' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+
+  &--1 {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: url('../img/media/credits/how-1.png') no-repeat;
+      background-position: bottom right;
+      background-size: contain;
+      width: 220px;
+      height: 100%;
+      z-index: 1;
+      display: block;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+
+  &--2 {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: url('../img/media/credits/how-2.png') no-repeat;
+      background-position: bottom right;
+      background-size: contain;
+      width: 250px;
+      height: 100%;
+      z-index: 1;
+      display: block;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+
+  &--3 {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: url('../img/media/credits/how-3.png') no-repeat;
+      background-position: bottom right;
+      background-size: contain;
+      width: 220px;
+      height: 100%;
+      z-index: 1;
+      display: block;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+
+  &--4 {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: url('../img/media/credits/how-4.png') no-repeat;
+      background-position: bottom right;
+      background-size: contain;
+      width: 220px;
+      height: 100%;
+      z-index: 1;
+      display: block;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+
+  &--2 &__text {
+    padding-right: 180px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 16px;
+    background: $color-main;
+    display: inline-block;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 32px;
+
+    @media (max-width: 992px) {
+      font-size: 20px;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.6;
+    padding-right: 150px;
+
+    @media (max-width: 992px) {
+      padding-right: 0;
+    }
+  }
+
+  @media (max-width: 992px) {
+    width: 100%;
+    margin: 8px 0;
+    padding: 24px;
+  }
+}
+
+.what-need {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+
+  &__left {
+    margin: 20px;
+    width: calc(100% / 2 - 40px);
+
+    @media (max-width: 992px) {
+      width: 100%;
+      margin: 8px 0;
+    }
+  }
+
+  &__right {
+    margin: 20px;
+    width: calc(100% / 2 - 40px);
+
+    .what-need-item {
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+
+      &__text {
+        padding-right: 250px;
+
+        @media (max-width: 992px) {
+          padding-right: 0;
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      width: 100%;
+      margin: 8px 0;
+    }
+  }
+
+  @media (max-width: 992px) {
+    margin: 32px 0 0 0;
+  }
+}
+
+.what-need-item {
+  background: #F5FBFD;
+  padding: 40px 32px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__text {
+    font-size: 32px;
+    font-weight: 600;
+    color: $color-main;
+    padding-right: 80px;
+
+    @media (max-width: 992px) {
+      font-size: 20px;
+      padding-right: 0;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 70px;
+    right: 0;
+  }
+
+  @media (max-width: 992px) {
+    margin: 0 0 8px;
+    padding: 32px 32px 120px 32px;
+  }
+}
