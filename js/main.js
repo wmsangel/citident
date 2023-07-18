@@ -150,4 +150,12 @@ $(function (){
         $('.js-reviews-more').addClass('is-opened')
     })
 
+
+    // ACCORDION
+    $('body').on('click', '.js-accordion-btn', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('is-opened');
+        $(this).next('.js-accordion-content').slideToggle()
+    })
+
 })
