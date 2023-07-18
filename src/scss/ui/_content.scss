@@ -8,6 +8,11 @@
   display: flex;
   flex-wrap: wrap;
 
+  a:not([class]) {
+    color: $color-main;
+    text-decoration: none;
+  }
+
   &__content {
     width: 100%;
   }
