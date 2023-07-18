@@ -75,6 +75,58 @@ $(function (){
         });
     }
 
+    if ($('.js-doctors-list').length) {
+        const swiper = new Swiper('.js-doctors-list', {
+            slidesPerView: 3,
+            spaceBetween: 40,
+            navigation: {
+                nextEl: '.js-doctors-list .swiper-button-next',
+                prevEl: '.js-doctors-list .swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 8
+                },
+                767: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            }
+
+        });
+    }
+
+    if ($('.js-doctors-list-2').length) {
+        const swiper = new Swiper('.js-doctors-list-2', {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            navigation: {
+                nextEl: '.js-doctors-list-2 .swiper-button-next',
+                prevEl: '.js-doctors-list-2 .swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 8
+                },
+                767: {
+                    slidesPerView: 4,
+                    spaceBetween: 40
+                }
+            }
+
+        });
+    }
+
 
     // PHONE
     var input = document.querySelector(".js-phone");
