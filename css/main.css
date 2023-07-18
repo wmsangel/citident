@@ -379,7 +379,8 @@ nav {
   background: #fff;
   border: 1px solid #1FBBB3;
   display: none;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  z-index: 2; }
   .nav-item-dropdown.is-opened {
     display: flex; }
   .nav-item-dropdown__item {
