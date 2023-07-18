@@ -127,6 +127,28 @@ $(function (){
         });
     }
 
+    if ($('.js-diploms-list').length) {
+        const swiper = new Swiper('.js-diploms-list', {
+            slidesPerView: 2,
+            spaceBetween: 16,
+            navigation: {
+                nextEl: '.js-diploms-list .swiper-button-next',
+                prevEl: '.js-diploms-list .swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                767: {
+                    slidesPerView: 2,
+                    spaceBetween: 16
+                }
+            }
+
+        });
+    }
+
 
     // PHONE
     var input = document.querySelector(".js-phone");
