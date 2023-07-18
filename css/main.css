@@ -1802,6 +1802,66 @@ section#services {
       margin-right: -20px;
       order: 1; } }
 
+.map {
+  margin-top: 80px;
+  position: relative; }
+  @media (max-width: 767px) {
+    .map {
+      margin-top: 0; } }
+
+.map-img {
+  height: 510px;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  @media (max-width: 767px) {
+    .map-img {
+      position: static;
+      border-radius: 10px; } }
+
+.map-contact {
+  border-radius: 20px;
+  border: 1px solid var(--unnamed, #CBF3F0);
+  background: #FFF;
+  position: relative;
+  z-index: 1;
+  padding: 48px;
+  top: -36px;
+  display: inline-block; }
+  .map-contact__logo {
+    margin-bottom: 32px; }
+  .map-contact__title {
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #A5ABAD; }
+  .map-contact__text {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 400; }
+    .map-contact__text a {
+      text-decoration: none;
+      color: #201E1F; }
+      .map-contact__text a:hover {
+        color: #1FBBB3; }
+  .map-contact__social {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px; }
+    .map-contact__social img {
+      width: 40px; }
+  @media (max-width: 992px) {
+    .map-contact {
+      padding: 40px 24px; } }
+  @media (max-width: 767px) {
+    .map-contact {
+      top: -160px;
+      width: 100%; } }
+
 /********************************************************* Breadcrumbs */
 #breadcrumbs {
   margin-top: 48px;
