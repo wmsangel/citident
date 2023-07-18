@@ -175,13 +175,41 @@
 
       a {
         text-decoration: none;
-        color: #4F4F4F;
+        color: #4F4F4F !important;
         transition: all .3s ease;
 
+        &.is-selected,
         &:hover {
-          color: $color-main;
+          color: $color-main !important;
         }
       }
     }
+  }
+}
+
+
+/********************************************************* Photo block */
+.photo-block {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+
+  @media (max-width: 480px) {
+    margin: 0;
+  }
+}
+
+.photo-block-item {
+  width: calc(100% / 3 - 40px);
+  margin: 20px;
+
+  @media (max-width: 767px) {
+    width: calc(100% / 2 - 40px);
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    margin: 8px 0;
   }
 }
