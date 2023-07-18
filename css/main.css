@@ -2350,6 +2350,23 @@ section#services {
   margin-top: 80px;
   line-height: 2; }
 
+/********************************************************* Gallery */
+.grid-item,
+.grid-sizer {
+  width: 48%;
+  margin-bottom: 40px; }
+  .grid-item--more,
+  .grid-sizer--more {
+    display: none; }
+  @media (max-width: 767px) {
+    .grid-item,
+    .grid-sizer {
+      width: 100%;
+      margin-bottom: 20px; } }
+
+.gallery-more {
+  text-align: center; }
+
 body {
   margin: 0;
   padding: 0;

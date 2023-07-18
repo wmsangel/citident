@@ -158,4 +158,35 @@ $(function (){
         $(this).next('.js-accordion-content').slideToggle()
     })
 
+
+    // FANCYBOX
+    Fancybox.bind('.js-fancybox', {
+        // Your custom options
+    });
+
+
+    // GALLERY
+    var $gridOption = {
+        itemSelector: '.js-gallery-item',
+        columnWidth: '.grid-sizer',
+        gutter: 40,
+        isAnimated: true
+    }
+
+    var $grid = $('.js-gallery').masonry($gridOption);
+
+    $('body').on('click', '.js-gallery-more', function (e) {
+        e.preventDefault();
+        var i = 0;
+        $('.js-gallery-item-more').each(function (e) {
+            if (i < 11 && !$(this).is(':visible')) {
+                i++;
+                $(this).show();
+                if ($(this).hasClass('js-gallery-item-last')) {
+                    $('.js-gallery-more').hide()
+                }
+            }
+        })
+        $grid.masonry('layout');
+    })
 })

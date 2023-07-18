@@ -1,0 +1,19 @@
+/********************************************************* Gallery */
+.grid-item,
+.grid-sizer {
+  width: 48%;
+  margin-bottom: 40px;
+  
+  &--more {
+    display: none ;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.gallery-more {
+  text-align: center;
+}
