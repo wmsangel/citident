@@ -54,9 +54,11 @@
     border-radius: 10px;
     color: $color-main;
     font-size: 16px;
+    border: 1px solid #fff;
 
     &:hover {
       background: $color-main;
+      border: 1px solid #fff;
       color: #fff;
     }
 
@@ -74,6 +76,10 @@
     color: #fff;
     border-radius: 10px;
     padding: 12px 32px;
+
+    &:hover {
+      background: $color-main--dark;
+    }
   }
 
   &.btn-more {
@@ -83,5 +89,9 @@
     padding-right: 30px;
     color: $color-main;
     text-decoration: none;
+
+    &:hover {
+      color: $color-main--dark;
+    }
   }
 }

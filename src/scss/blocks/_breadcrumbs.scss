@@ -2,6 +2,10 @@
 #breadcrumbs {
   margin-top: 48px;
   margin-bottom: 32px;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 
 .breadcrumbs {

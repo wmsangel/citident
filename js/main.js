@@ -15,6 +15,12 @@ $(function (){
         $('.js-nav-item-dropdown').toggleClass('is-opened')
     })
 
+    $('body').on('click', function (e) {
+        if ($('.js-nav-item-dropdown').hasClass('is-opened') && !$(e.target).hasClass('js-services-link')) {
+            $('.js-nav-item-dropdown').removeClass('is-opened')
+        }
+    })
+
     $('body').on('click', '.js-services-mobile-link', function (e) {
         e.preventDefault();
         $(this).toggleClass('is-opened')
@@ -36,14 +42,23 @@ $(function (){
         });
     }
 
-    if ($('.js-services').length && $(window).width() > 992) {
+    if ($('.js-services').length) {
         const swiper = new Swiper('.js-services', {
-            loop: true,
+            // loop: true,
             slidesPerView: 3,
             spaceBetween: 42,
             navigation: {
                 nextEl: '.js-services .swiper-button-next',
                 prevEl: '.js-services .swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 10,
+                },
+                993: {
+                    slidesPerView: 3,
+                }
             }
         });
     }
@@ -150,32 +165,6 @@ $(function (){
     }
 
 
-    // PHONE
-    var input = document.querySelector(".js-phone");
-    window.intlTelInput(input, {
-        // allowDropdown: false,
-        // autoInsertDialCode: true,
-        // autoPlaceholder: "off",
-        // dropdownContainer: document.body,
-        // excludeCountries: ["us"],
-        // formatOnDisplay: false,
-        // geoIpLookup: function(callback) {
-        //   fetch("https://ipapi.co/json")
-        //     .then(function(res) { return res.json(); })
-        //     .then(function(data) { callback(data.country_code); })
-        //     .catch(function() { callback("us"); });
-        // },
-        // hiddenInput: "full_number",
-        // initialCountry: "auto",
-        // localizedCountries: { 'de': 'Deutschland' },
-        // nationalMode: false,
-        // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-        // placeholderNumberType: "MOBILE",
-        // preferredCountries: ['cn', 'jp'],
-        // separateDialCode: true,
-        // showFlags: false,
-    });
-
     // GO TO TOP
     $('body').on('click', '.js-go-to-top', function (e) {
         e.preventDefault();
@@ -267,4 +256,125 @@ $(function (){
             $grid.masonry('layout');
         })
     }
+
+
+    // TIME
+    if ($('.js-time').length) {
+        $('.js-time').timepicker({
+            timeFormat: 'HH:mm',
+            interval: 15,
+        });
+    }
+
+
+    // FORM
+    $('body').on('click', '.js-submit-form', function (e) {
+
+        var formevent = e;
+        let form = $(this).parents('.js-form');
+        let formErrors = form.find('.js-form-errors');
+        formErrors.html('');
+
+        if (form.find('.js-input').length) {
+            form.find('.js-input').each(function (e) {
+                if ($(this).val().length < 1) {
+                    let errorText = '<div>Поле "' + $(this).data('field-name') + '" не может быть пустым</div>';
+                    $(errorText).appendTo(formErrors);
+                    formevent.preventDefault();
+                }
+            })
+        }
+
+        if (form.find('.js-phone').length) {
+            let phoneField = form.find('.js-phone');
+            if (phoneField.val().length < 18) {
+                let errorText = '<div>Введите корректный номер телефона</div>';
+                $(errorText).appendTo(formErrors)
+                formevent.preventDefault();
+            }
+
+        }
+
+        if (form.find('.js-agree').length) {
+            let agreeField = form.find('.js-agree');
+            if (!agreeField.is(':checked')) {
+                let errorText = '<div>Дайте согласие на обработку персональных данных</div>';
+                $(errorText).appendTo(formErrors)
+                formevent.preventDefault();
+            }
+        }
+
+    })
+
+
+    // TABS
+    $('body').on('click', '.js-tab-link', function (e) {
+        e.preventDefault();
+        let tabID = $(this).data('tab-id');
+        if (!$(this).hasClass('methods-tabs-nav-link--selected')) {
+            $('.js-tab-link').removeClass('methods-tabs-nav-link--selected');
+            $('.js-tab-info').removeClass('methods-tabs-info--selected');
+            $('.js-tab-link[data-tab-id="'+tabID+'"]').addClass('methods-tabs-nav-link--selected');
+            $('.js-tab-info[data-tab-id="'+tabID+'"]').addClass('methods-tabs-info--selected');
+        }
+
+
+    });
+
+
+    // TESTIMONIAL
+    if ($('.js-testimonial-main').length) {
+        var testimonialThumbs = new Swiper ('.js-testimonial-thumbs', {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            slideToClickedSlide: true,
+            watchSlidesProgress: true,
+        });
+
+        var testimonialMain = new Swiper ('.js-testimonial-main', {
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.js-testimonials-nav.swiper-button-next',
+                prevEl: '.js-testimonials-nav.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: testimonialThumbs
+            },
+        });
+
+    }
+
 })
+
+
+// PHONE MASK
+$(function () {
+    //+7 (XXX) XXX-XX-XX
+    if ($('.js-phone').length > 0) {
+        var trigger = false;
+        var options = {
+            'translation': {
+                C: {
+                    pattern: /[7]/
+                },
+                M: {
+                    pattern: /[9,7,5,3,2]/
+                },
+                L: {
+                    pattern: /[9,7,5]/
+                }
+            },
+            onKeyPress: function onKeyPress(cep, e, field, options) {
+                var masks = ['+7 (000) 000-00-00'];
+                if (cep.length === 8) {
+                    trigger = true;
+                }
+                if (cep.length < 8) {
+                    trigger = false;
+                }
+                var mask = cep.length > 7 && trigger ? masks[0] : masks[0];
+            }
+        };
+        $('.js-phone').mask('+7 (000) 000-00-00', options);
+    }
+});

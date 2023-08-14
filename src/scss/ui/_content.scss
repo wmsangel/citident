@@ -2,6 +2,10 @@
 #content {
   margin-bottom: 48px;
   margin-top: 32px;
+
+  @media (max-width: 767px) {
+    margin-top: 16px;
+  }
 }
 
 .page {
@@ -20,6 +24,11 @@
   &__sidebar {
     width: 290px;
     margin-left: 20px;
+
+    .news-list {
+      position: sticky;
+      top: 0;
+    }
 
     &--news {
       width: 400px;
