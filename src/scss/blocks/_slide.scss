@@ -100,21 +100,21 @@ section#main-slider {
     }
   }
 
-  .swiper-pagination-bullet {
-    width: 11px;
-    height: 11px;
-    background: #7ad1ca;
-
-    &.swiper-pagination-bullet-active {
-      background: $color-main;
-    }
-  }
-
   @media (max-width: 992px) {
     height: auto;
 
     .swiper-pagination {
 
     }
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  background: #7ad1ca;
+
+  &.swiper-pagination-bullet-active {
+    background: $color-main;
   }
 }

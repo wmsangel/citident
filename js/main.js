@@ -55,6 +55,10 @@ $(function (){
                 320: {
                     slidesPerView: 'auto',
                     spaceBetween: 10,
+                    pagination: {
+                        el: '.js-services .swiper-pagination',
+                        type: 'bullets',
+                    },
                 },
                 993: {
                     slidesPerView: 3,
@@ -75,11 +79,19 @@ $(function (){
             breakpoints: {
                 320: {
                     slidesPerView: 1,
-                    spaceBetween: 8
+                    spaceBetween: 8,
+                    pagination: {
+                        el: '.js-news .swiper-pagination',
+                        type: 'bullets',
+                    },
                 },
                 480: {
                     slidesPerView: 2,
-                    spaceBetween: 8
+                    spaceBetween: 8,
+                    pagination: {
+                        el: '.js-news .swiper-pagination',
+                        type: 'bullets',
+                    },
                 },
                 767: {
                     slidesPerView: 3,
@@ -101,11 +113,19 @@ $(function (){
             breakpoints: {
                 320: {
                     slidesPerView: 1,
-                    spaceBetween: 0
+                    spaceBetween: 0,
+                    pagination: {
+                        el: '.js-doctors-list .swiper-pagination',
+                        type: 'bullets',
+                    },
                 },
                 480: {
                     slidesPerView: 2,
-                    spaceBetween: 8
+                    spaceBetween: 8,
+                    pagination: {
+                        el: '.js-doctors-list .swiper-pagination',
+                        type: 'bullets',
+                    },
                 },
                 767: {
                     slidesPerView: 3,
@@ -127,11 +147,19 @@ $(function (){
             breakpoints: {
                 320: {
                     slidesPerView: 1,
-                    spaceBetween: 0
+                    spaceBetween: 0,
+                    pagination: {
+                        el: '.js-doctors-list-2 .swiper-pagination',
+                        type: 'bullets',
+                    },
                 },
                 480: {
                     slidesPerView: 2,
-                    spaceBetween: 8
+                    spaceBetween: 8,
+                    pagination: {
+                        el: '.js-doctors-list-2 .swiper-pagination',
+                        type: 'bullets',
+                    },
                 },
                 767: {
                     slidesPerView: 4,
@@ -153,7 +181,11 @@ $(function (){
             breakpoints: {
                 320: {
                     slidesPerView: 1,
-                    spaceBetween: 0
+                    spaceBetween: 0,
+                    pagination: {
+                        el: '.js-diploms-list .swiper-pagination',
+                        type: 'bullets',
+                    },
                 },
                 767: {
                     slidesPerView: 2,

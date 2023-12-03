@@ -305,7 +305,7 @@
                     <a href="about.html" class="nav-item__link">О клинике</a>
                 </li>
                 <li class="nav-item">
-                    <a href="contacts.html" class="nav-item__link">Контакты</a>
+                    <a href="contacts.html" class="nav-item__link nav-item__link--selected">Контакты</a>
                 </li>
             </ul>
             <a href="#" class="nav-item-account">
@@ -477,7 +477,7 @@
                     <form action="">
                         <div class="field-row" data-cols="1">
                             <div class="field-row__col">
-                                <input type="text" placeholder="Имя" required>
+                                <input type="text" placeholder="Имя" pattern="[а-яА-ЯёЁ ]+" required>
                             </div>
                         </div>
                         <div class="field-row" data-cols="1">
@@ -487,7 +487,7 @@
                         </div>
                         <div class="field-row" data-cols="2">
                             <div class="field-row__col">
-                                <input type="time" placeholder="9:35" required>
+                                <input type="text" placeholder="9:35" class="js-time input-time">
                             </div>
                             <div class="field-row__col">
                                 <input type="date" placeholder="01.04.2022" required>
@@ -604,7 +604,7 @@
             <form method="POST" action="#" class="form-blue js-form">
                 <div class="field-row" data-cols="1">
                     <div class="field-row__col">
-                        <input type="text" class="js-input" placeholder="ФИО" onkeydown="return /^[a-zA-Z ]*$/i.test(event.key)" data-field-name="ФИО">
+                        <input type="text" class="js-input" placeholder="ФИО" onkeydown="return /^[а-яА-ЯёЁ ]*$/i.test(event.key)" data-field-name="ФИО">
                     </div>
                 </div>
                 <div class="field-row" data-cols="1">
@@ -635,7 +635,7 @@
             <form method="POST" action="#" class="js-form form-blue">
                 <div class="field-row" data-cols="1">
                     <div class="field-row__col">
-                        <input type="text" class="js-input" placeholder="ФИО" onkeydown="return /^[a-zA-Z ]*$/i.test(event.key)" data-field-name="ФИО">
+                        <input type="text" class="js-input" placeholder="Имя" onkeydown="return /^[а-яА-ЯёЁ ]*$/i.test(event.key)" data-field-name="ФИО">
                     </div>
                 </div>
                 <div class="field-row" data-cols="1">

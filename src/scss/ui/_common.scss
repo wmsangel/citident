@@ -310,8 +310,8 @@ nav {
       }
 
       &:hover {
-        background: #1FBBB3;
-        color: #fff;
+        background: darken($color-main, 5%) !important;
+        color: #fff !important;
       }
     }
   }
@@ -335,6 +335,11 @@ nav {
     align-items: center;
     transition: all .3s ease;
     padding: 0 45px;
+
+    &:hover {
+      background: #eefffd;
+      color: $color-main;
+    }
 
     &--selected,
     &:hover {
@@ -806,6 +811,7 @@ footer {
 
 
 /********************************************************* Titles */
+.h1-title,
 h1 {
   font-size: 40px;
   font-style: normal;
@@ -1031,6 +1037,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 160px;
 
   &__text {
     width: 70%;
@@ -1061,4 +1068,9 @@ h3 {
       margin-bottom: 8px;
     }
   }
+}
+
+.blue-content {
+  background: #F5FBFD;
+  padding: 40px;
 }

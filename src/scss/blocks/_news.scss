@@ -60,6 +60,7 @@
 
   @media (max-width: 767px) {
     padding-top: 80px !important;
+    padding-bottom: 30px !important;
   }
 }
 .news-item {
@@ -67,11 +68,21 @@
   border-radius: 20px;
   overflow: hidden;
   transition: all .3s ease;
+  position: relative;
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 
   &__img {
     height: 240px;
     border-radius: 20px;
     overflow: hidden;
+    margin-top: 0;
 
     img {
       width: 100%;
@@ -132,6 +143,14 @@
 
   &:hover {
     box-shadow: 0 0 10px rgba(0,0,0,.1);
+
+    a {
+      color: $color-main;
+    }
+
+    .btn-more {
+      color: darken($color-main, 5%);
+    }
   }
 }
 
